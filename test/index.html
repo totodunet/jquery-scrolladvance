@@ -82,12 +82,12 @@
 				$('#center_x').focus(function(){center_x=false;});
 				$('#center_y').focus(function(){center_y=false;});
 				
-				$('#top').blur(function(){top=true;});
-				$('#bottom').blur(function(){bottom=true;});
-				$('#left').blur(function(){left=true;});
-				$('#right').blur(function(){right=true;});
-				$('#center_x').blur(function(){center_x=true;});
-				$('#center_y').blur(function(){center_y=true;});
+				$('#top').blur(function(){top=true;$('#top').val($('html, body').scrollTop());});
+				$('#bottom').blur(function(){bottom=true;$('#bottom').val($(document).scrollBottom());});
+				$('#left').blur(function(){left=true;$('#left').val($('html, body').scrollLeft());});
+				$('#right').blur(function(){right=true;$('#right').val($(document).scrollRight());});
+				$('#center_x').blur(function(){center_x=true;$('#center_x').val($(document).scrollCenter().x);});
+				$('#center_y').blur(function(){center_y=true;$('#center_y').val($(document).scrollCenter().y);});
 				
 				$('#top').keyup(function(){
 					$('html, body').animate({scrollTop:$(this).val()});
