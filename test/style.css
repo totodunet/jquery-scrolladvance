@@ -10,7 +10,7 @@ body{
 	top:800px;
 	width:500px;
 	height:300px;
-	z-index:-2;
+	z-index:-1;
 }
 
 body>p,body>div{
@@ -56,7 +56,7 @@ div{
 #test{
 	top:0px;
 	left:10px;
-	z-index:-1;
+	height:50px;
 }
 #topleft{
 	position:absolute;
