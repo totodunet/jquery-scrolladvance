@@ -34,7 +34,7 @@
 	"bugs": "https://github.com/totodunet/jquery-scrolladvanced/issues",
     "homepage": "http://totodunet.github.io/",
     "docs": "https://github.com/totodunet/jquery-scrolladvanced/",
-    "download": "http://github.com/totodunet/jquery.scrolladvanced/archive/master.zip",
+    "download": "http://github.com/totodunet/jquery-scrolladvanced/archive/master.zip",
     "dependencies": {
         "jquery": ">=1.6"
     }
