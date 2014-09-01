@@ -26,10 +26,13 @@ functions
 	$(this).scrollBottomLeft(target [,options]);__________set the scroll position for the target is at the bottom left of the view.
 	$(this).scrollBottomRight(target [,options]);_________set the scroll position for the target is at the bottom right of the view.
     
-	See (http://api.jquery.com/animate/) to know options of animation. options parameter must be a PlainObject type, a jQuery object for target parameter and a numeric number for value parameter.
+See (http://api.jquery.com/animate/) to know options of animation. options parameter must be a PlainObject type, a jQuery object for target parameter and a numeric number for value parameter.
     
 jQuery required version >=1.6.0
-    
+
+demonstration and about
+=======================
+   
 See a demonstration here : http://totodunet.github.io/jquery-scrolladvanced/
 
 If you're interested, thanks to fork me or/and contribute to the development of jquery-scrolladvanced!
