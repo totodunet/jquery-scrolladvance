@@ -1,0 +1,79 @@
+body{
+	background:url('img/bg.jpg') repeat;
+	width:4535px;
+	height:3175px;
+}
+#block{
+	background-color:white;
+	position:absolute;
+	left:2000px;
+	top:800px;
+	width:500px;
+	height:300px;
+	z-index:-1;
+}
+
+body>p,body>div{
+	position:fixed;
+}
+body>p{
+	font-weight:bold;
+	font-style:italic;
+	font-size:20px;
+	font-family:Arial,Sans-serif;
+	color:blue;
+	text-align:center;
+}
+#p_t{
+	left:44%;
+	top:0%;
+}
+#p_b{
+	left:44%;
+	bottom:0%;
+}
+#p_l{
+	left:0px;
+	top:47%;
+}
+#p_r{
+	right:0px;
+	top:47%;
+}
+#p_c{
+	top:47%;
+	left:42%;
+}
+input[type="text"]{
+	width:50px;
+}
+div{
+	bottom:0px;
+	right:10px;
+	text-align:center;
+	width:10%;
+}
+#test{
+	top:0px;
+	left:10px;
+}
+#topleft{
+	position:absolute;
+	top:760px;
+	left:1900px;
+}
+#topright{
+	position:absolute;
+	top:760px;
+	left:2400px;
+}
+#bottomleft{
+	position:absolute;
+	top:1115px;
+	left:1900px;
+}
+#bottomright{
+	position:absolute;
+	top:1115px;
+	left:2400px;
+}

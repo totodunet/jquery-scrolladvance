@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+
+<!--
+
+████████╗ ██████╗ ████████╗ ██████╗ ██████╗ ██╗   ██╗███╗   ██╗███████╗████████╗
+╚══██╔══╝██╔═══██╗╚══██╔══╝██╔═══██╗██╔══██╗██║   ██║████╗  ██║██╔════╝╚══██╔══╝
+   ██║   ██║   ██║   ██║   ██║   ██║██║  ██║██║   ██║██╔██╗ ██║█████╗     ██║
+   ██║   ██║   ██║   ██║   ██║   ██║██║  ██║██║   ██║██║╚██╗██║██╔══╝     ██║
+   ██║   ╚██████╔╝   ██║   ╚██████╔╝██████╔╝╚██████╔╝██║ ╚████║███████╗   ██║
+   ╚═╝    ╚═════╝    ╚═╝    ╚═════╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝╚══════╝   ╚═╝
+
+/******************************************************************/
+/*                                                                */
+/*              jquery.scrolladvanced.js Demonstration            */
+/*                                                                */
+/*              			by Totodunet                          */
+/*                         www.totodu.net                         */
+/*                                                                */
+/******************************************************************/
+
+-->
+
+<html lang="en-US">
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
+        <meta name="author" content="Totodunet - www.totodu.net"/>
+        <meta name="description" content="scrollAdvanced is a jQuery plugin that include in more of this library scrollBottom(), scrollRight(), scrollCenter() methods and others!!"/>
+        <meta name="keywords" content="scrollAdvanced, jQuery plugin, scrollBottom, scrollRight, scrollCenter, scrollTopRight, scrollTopLeft, scrollBottomLeft, scrollBottomRight, scroll position, scroll bar"/>
+        <meta name="robots" content="index,follow"/>
+        <title>ScrollPosition - jQuery Plugin</title>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+		
+		<!-- Import jQuery Library -->
+		<script type="text/javascript" src="../js/jquery.min.js"></script>
+		
+		<!-- ScrollAdvanced jQuery Plugin -->
+		<script type="text/javascript" src="../js/jquery.scrolladvanced.min.js"></script>
+		
+		<!-- JS script using ScrollAdvanced jQuery Plugin -->
+		<script type="text/javascript">
+			$(document).ready(function(){
+			
+				$('#top').val($(this).scrollTop());
+				$('#bottom').val($(this).scrollBottom());
+				$('#left').val($(this).scrollLeft());
+				$('#right').val($(this).scrollRight());
+				$('#center_x').val($(this).scrollCenter().x);
+				$('#center_y').val($(this).scrollCenter().y);
+				
+				var top=true, bottom=true, left=true, right=true, center_x=true, center_y=true;
+				
+			
+				$(document).scroll(function(){
+					if(top)
+						$('#top').val($(this).scrollTop());
+					if(bottom)
+						$('#bottom').val($(this).scrollBottom());
+					if(left)
+						$('#left').val($(this).scrollLeft());
+					if(right)
+						$('#right').val($(this).scrollRight());
+					if(center_x)
+						$('#center_x').val($(this).scrollCenter().x);
+					if(center_y)
+						$('#center_y').val($(this).scrollCenter().y);
+				});
+				
+				$('#test1').click(function(){
+						$(document).scrollCenter($('#block'));
+					}
+				);
+				
+				$('#test2').click(function(){
+						$(document).scrollCenter($('#block'),{duration:4000});
+					}
+				);
+				
+				$('#top').focus(function(){top=false;});
+				$('#bottom').focus(function(){bottom=false;});
+				$('#left').focus(function(){left=false;});
+				$('#right').focus(function(){right=false;});
+				$('#center_x').focus(function(){center_x=false;});
+				$('#center_y').focus(function(){center_y=false;});
+				
+				$('#top').blur(function(){top=true;});
+				$('#bottom').blur(function(){bottom=true;});
+				$('#left').blur(function(){left=true;});
+				$('#right').blur(function(){right=true;});
+				$('#center_x').blur(function(){center_x=true;});
+				$('#center_y').blur(function(){center_y=true;});
+				
+				$('#top').keyup(function(){
+					$('html, body').animate({scrollTop:$(this).val()});
+				});
+				$('#bottom').keyup(function(){
+					$(document).scrollBottom($(this).val(),{});
+				});
+				$('#left').keyup(function(){
+					$('html, body').animate({scrollLeft:$(this).val()});
+				});
+				$('#right').keyup(function(){
+					$(document).scrollRight($(this).val(),{});
+				});
+				$('#center_x').keyup(function(){
+					$(document).scrollCenter($(this).val(),$('#center_y').val(),{});
+				});
+				$('#center_y').keyup(function(){
+					$(document).scrollCenter($('#center_x').val(),$(this).val(),{});
+				});
+				
+				$('#topleft').click(function(){$(document).scrollTopLeft($('#block'),{duration:4000});});
+				$('#topright').click(function(){$(document).scrollTopRight($('#block'),{duration:4000});});
+				$('#bottomleft').click(function(){$(document).scrollBottomLeft($('#block'),{duration:4000});});
+				$('#bottomright').click(function(){$(document).scrollBottomRight($('#block'),{duration:4000});});
+				
+			});
+		</script>
+	</head>
+	<body>
+		<p id="p_t">this.scrollTop(<input type="text" id="top"/>)</p>
+		<p id="p_b">this.scrollBottom(<input type="text" id="bottom"/>)</p>
+		<p id="p_l">this.scrollLeft(<input type="text" id="left"/>)</p>
+		<p id="p_r">this.scrollRight(<input type="text" id="right"/>)</p>
+		<p id="p_c">this.scrollCenter(<input type="text" id="center_x"/>, <input type="text" id="center_y"/>)</p>
+		<div id="test">
+			<input id="test1" type="button" value="Test : $(document).scrollCenter( $('#block') )"/>
+			<input id="test2" type="button" value="With animation : $(document).scrollCenter( $('#block'),{duration:4000} )"/>
+		</div>
+		<input id="topleft" type="button" value="this.scrollTopLeft( $('#block') )"/>
+		<input id="topright" type="button" value="this.scrollTopRight( $('#block') )"/>
+		<input id="bottomleft" type="button" value="this.scrollBottomLeft( $('#block') )"/>
+		<input id="bottomright" type="button" value="this.scrollBottomRight( $('#block') )"/>
+		<div>
+		<p id="github"><a href="https://github.com/totodunet/endless.js/" target="_blank">Plugin is available on GitHub</a></p>
+		<p id="licence">Copyright 2014, <a href="http://totodu.net/" target="_blank">Totodunet</a>  ScrollAdvanced is published under <a href="http://opensource.org/licenses/MIT" target="_blank">The MIT License</a><p>
+		</div>
+		<div id="block">
+		</div>
+	</body>
+</html>
