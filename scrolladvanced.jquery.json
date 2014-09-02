@@ -1,6 +1,6 @@
 {
-    "name": "scrolladvanced",
-    "title": "jQuery scroll advanced",
+    "name": "scrolladvance",
+    "title": "jQuery scroll advance",
     "description": "simple jQuery plugin with methods scrollBottom(), scrollRight(), scrollCenter() and many more. You can put in parameter values, DOM element and options for animation.",
     "keywords": [
         "scroll",
@@ -30,11 +30,11 @@
             "url": "http://opensource.org/licenses/MIT"
         }
     ],
-	"demo": "http://totodunet.github.io/jquery-scrolladvanced/",
-	"bugs": "https://github.com/totodunet/jquery-scrolladvanced/issues",
+	"demo": "http://totodunet.github.io/jquery-scrolladvance/",
+	"bugs": "https://github.com/totodunet/jquery-scrolladvance/issues",
     "homepage": "http://totodunet.github.io/",
-    "docs": "https://github.com/totodunet/jquery-scrolladvanced/",
-    "download": "http://github.com/totodunet/jquery-scrolladvanced/archive/master.zip",
+    "docs": "https://github.com/totodunet/jquery-scrolladvance/",
+    "download": "http://github.com/totodunet/jquery-scrolladvance/archive/master.zip",
     "dependencies": {
         "jquery": ">=1.6"
     }
