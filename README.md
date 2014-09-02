@@ -33,7 +33,7 @@ jQuery required version >=1.6.0
 demonstration and about
 =======================
    
-See a demonstration here : http://totodunet.github.io/jquery-scrolladvanced/
+See a demonstration here : http://totodunet.github.io/jquery-scrolladvance/
 
 If you're interested, thanks to fork me or/and contribute to the development of jquery-scrolladvanced!
 
