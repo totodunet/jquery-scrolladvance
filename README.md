@@ -1,4 +1,4 @@
-scrollAdvanced
+scrollAdvance
 ==============
 
 It adds some useful functions for the scroll position in more scrollLeft() and scrollTop().
