@@ -1,7 +1,7 @@
 scrollAdvance
 ==============
 
-It adds some useful functions for the scroll position in more scrollLeft() and scrollTop().
+It adds some useful functions as scrollBottom(), scrollRight or scrollCenter() for the scroll position in more scrollLeft() and scrollTop().
 
     $(document).ready(function(){
         $(document).scrollRight(0,{duration:4000,ease:'swing'});
