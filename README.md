@@ -35,7 +35,7 @@ demonstration and about
    
 See a demonstration here : http://totodunet.github.io/jquery-scrolladvance/
 
-If you're interested, thanks to fork me or/and contribute to the development of jquery-scrolladvanced!
+If you're interested, thanks to fork me or/and contribute to the development of jquery-scrolladvance!
 
 published under the MIT License (http://opensource.org/licenses/MIT)
 
