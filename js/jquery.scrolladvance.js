@@ -1,6 +1,6 @@
 /* 
 
-	  jQuery plugin scrollAdvanced
+	  jQuery plugin scrollAdvance
 	  
 	  functions :
 	  
